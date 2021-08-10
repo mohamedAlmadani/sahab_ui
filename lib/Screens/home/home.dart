@@ -4,7 +4,7 @@ import 'package:sahab/Screens/myacount/PersonScreen.dart';
 import 'package:sahab/Screens/home/SectionAdsScreen.dart';
 import 'package:sahab/Screens/ath/SignUpScreen.dart';
 import 'package:sahab/Screens/ath/changePasswordScreen.dart';
-import 'package:sahab/Screens/home/introChatScreen.dart';
+import 'package:sahab/Screens/chat/introChatScreen.dart';
 
 import 'sectionsScreen.dart';
 

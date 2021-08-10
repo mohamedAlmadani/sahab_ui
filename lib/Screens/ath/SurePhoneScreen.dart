@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
-import 'package:sahab/Screens/home/ActivateTheAccount.dart';
+import 'package:sahab/Screens/ath/ActivateTheAccount.dart';
 import 'package:sahab/Widget/CustonShapLogin.dart';
 import 'package:sahab/Widget/TextStyleWidget.dart';
 import 'package:sahab/Widget/customshap.dart';
