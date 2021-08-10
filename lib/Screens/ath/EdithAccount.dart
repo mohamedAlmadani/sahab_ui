@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
+import 'package:sahab/Screens/SearchScreen.dart';
+import 'package:sahab/Screens/home/home.dart';
 import 'package:sahab/Widget/appbar_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sahab/Widget/customshap.dart';
@@ -30,8 +33,13 @@ class _EdithAccountState extends State<EdithAccount> {
           text: translator.translate('EditMyAccount'),
           iconaction: Icons.search,
           ontap: () {
-           // Get.to(Home());
-          }),
+            Get.to(Home());
+          },
+          onTaptwo: (){
+            Get.to(SearchScreen());
+    },
+
+          ),
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
@@ -42,28 +50,32 @@ class _EdithAccountState extends State<EdithAccount> {
               SizedBox(
                 height: 40.h,
               ),
-              Stack(
-                alignment: Alignment.center,
-              children: [
-                CircleAvatar(
-                  radius: 60,
-                  backgroundImage: AssetImage('assets/images/myaccount/edith.png'),
+              Container(
+                margin: EdgeInsets.only(right: 100.w),
+                child: Stack(
+                  alignment: Alignment.center,
+
+                children: [
+                  CircleAvatar(
+                    radius: 60,
+                    backgroundImage: AssetImage('assets/images/myaccount/edith.png'),
+                  ),
+                  Transform.translate(
+                    offset: Offset(-45.w,40.h),
+                    child: Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                            color: Color(0xFF355ABE)
+                         // border: Border.all(width: 5.0,   color: Color(0xFF355ABE),),
+                        ),
+                        width: 35.w,
+                        height: 35.h,
+
+
+                        child: Image.asset('assets/images/myaccount/camera.png',color: Colors.white,)),
+                  )
+                ],
                 ),
-                Transform.translate(
-                  offset: Offset(-45.w,40.h),
-                  child: Container(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                          color: Color(0xFF355ABE)
-                       // border: Border.all(width: 5.0,   color: Color(0xFF355ABE),),
-                      ),
-                      width: 35.w,
-                      height: 35.h,
-
-
-                      child: Image.asset('assets/images/myaccount/camera.png',color: Colors.white,)),
-                )
-              ],
               ),
               CustomTextField(hint: translator.translate('Name'),size: 15,color: Color(0xFF272727),fontfamily: 'GE_SS_Two_Medium',fontWeight: FontWeight.w300 ),
               Padding(
@@ -203,7 +215,7 @@ class _EdithAccountState extends State<EdithAccount> {
               SizedBox(height: 50.h,),
               CustomShape(
                 text: translator.translate('confirmation'),
-                icon: Icons.arrow_back_ios,
+                icon: Icons.arrow_forward_ios,
                 ontap: (){
                  // Get.to(ActivateAccount());
                 },

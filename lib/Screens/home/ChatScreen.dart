@@ -1,7 +1,6 @@
 import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 
-import 'package:sahab/Widget/appbar_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -28,10 +27,10 @@ class _ChatScreenState extends State<ChatScreen> {
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset('assets/images/personchat.png'??'',width: 35,height: 35,),
+            Image.asset('assets/images/personchat.png',width: 35,height: 35,),
             SizedBox(width: 5,),
             Text(
-              'محمد سارة'??'',
+              'محمد سارة',
               style: TextStyle(
                   color: Color(0xFF355ABE),
                   fontFamily: 'GE_SS_Two_Medium',

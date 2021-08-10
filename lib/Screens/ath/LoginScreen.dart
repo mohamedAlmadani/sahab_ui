@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
-import 'package:sahab/Screens/sectionsScreen.dart';
+import 'package:sahab/Screens/home/sectionsScreen.dart';
 import 'package:sahab/Screens/ath/SignUpScreen.dart';
 import 'package:sahab/Screens/ath/changePasswordScreen.dart';
 import 'package:sahab/Widget/TextStyleWidget.dart';
 import 'package:sahab/Widget/customshap.dart';
 import 'package:sahab/Widget/customtextField.dart';
-import 'package:sahab/main.dart';
-import 'package:sahab/models/language.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -31,22 +29,11 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 40.h,
+                height: 60.h,
               ),
-              OutlineButton(
-                onPressed: () {
-                  translator.setNewLanguage(
-                    context,
-                    newLanguage:
-                        translator.currentLanguage == 'ar' ? 'en' : 'ar',
-                    remember: true,
-                    restart: true,
-                  );
-                },
-                child: Text(translator.translate('buttonTitle')),
-              ),
+
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
+                margin: translator.currentLanguage == 'en'?EdgeInsets.only(left: 280.w):EdgeInsets.only(right: 280.w),
                 width: 74.0.w,
                 height: 74.0.h,
                 decoration: BoxDecoration(
@@ -96,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   fontfamily: 'GE_SS_Two_Medium',
                   fontWeight: FontWeight.w300),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 10.w),
+                padding: EdgeInsets.only(right: 280.w),
                 child: CustomText(
                   text: translator.translate('newAccount'),
                   numsize: 17,
@@ -108,15 +95,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
               ),
-              SizedBox(
-                height: 20,
+           const   SizedBox(
+                height: 40,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomShape(
-                    text: translator.translate('Next'),
-                    icon: Icons.arrow_back_ios,
+                    text: translator.translate('login'),
+                    icon: Icons.arrow_forward_ios,
                     ontap: (){
                       Get.to(SectionsScreen());
                     },

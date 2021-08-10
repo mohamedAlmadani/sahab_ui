@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
+import 'package:sahab/Widget/CustonShapLogin.dart';
 import 'package:sahab/Widget/TextStyleWidget.dart';
 import 'package:sahab/Widget/customshap.dart';
 import 'package:sahab/Widget/customtextField.dart';
@@ -21,28 +22,10 @@ class _SignUpState extends State<SignUp> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 40.h,
+                height: 60.h,
               ),
-              Container(
+              CustomShapLogin(),
 
-
-                margin: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
-                width: 74.0.w,
-                height: 74.0.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14.0),
-                    color: const Color(0xFF355ABE),
-                    image:DecorationImage(
-                        image: AssetImage('assets/images/logob.png')
-                    )
-                ),
-
-                // child: Image.asset('assets/images/logob.png'),
-
-
-
-
-              ),
               Padding(
                 padding:  EdgeInsets.symmetric(vertical: 0.h,horizontal: 10.w),
                 child: CustomText(
@@ -80,10 +63,10 @@ class _SignUpState extends State<SignUp> {
               CustomTextField(hint: translator.translate('Name'),size: 15,color: Color(0xFF272727),fontfamily: 'GE_SS_Two_Medium',fontWeight: FontWeight.w300 ),
               CustomTextField(hint: translator.translate('password'),size: 15,color: Color(0xFF272727),fontfamily: 'GE_SS_Two_Medium',fontWeight: FontWeight.w300 ),
               CustomTextField(hint: translator.translate('City'),size: 15,color: Color(0xFF272727),fontfamily: 'GE_SS_Two_Medium',fontWeight: FontWeight.w300 ),
-              SizedBox(height: 30.h,),
+              SizedBox(height: 50.h,),
               CustomShape(
                 text: translator.translate('SignUp'),
-                icon: Icons.arrow_back_ios,
+                icon: Icons.arrow_forward_ios,
               ),
 
 

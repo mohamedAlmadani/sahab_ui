@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sahab/Screens/ath/LoginScreen.dart';
-import 'package:sahab/Screens/PersonScreen.dart';
-import 'package:sahab/Screens/SectionAdsScreen.dart';
+import 'package:sahab/Screens/myacount/PersonScreen.dart';
+import 'package:sahab/Screens/home/SectionAdsScreen.dart';
 import 'package:sahab/Screens/ath/SignUpScreen.dart';
 import 'package:sahab/Screens/ath/changePasswordScreen.dart';
-import 'package:sahab/Screens/introChatScreen.dart';
+import 'package:sahab/Screens/home/introChatScreen.dart';
 
 import 'sectionsScreen.dart';
 

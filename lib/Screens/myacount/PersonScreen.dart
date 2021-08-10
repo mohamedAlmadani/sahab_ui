@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sahab/Screens/FavoriteScreen.dart';
+import 'package:sahab/Screens/myacount/FavoriteScreen.dart';
 import 'package:sahab/Screens/ath/EdithAccount.dart';
 import 'package:sahab/Screens/ath/Forgot%20password.dart';
-import 'package:sahab/Screens/myads.dart';
+import 'package:sahab/Screens/myacount/myads.dart';
 import 'package:sahab/Widget/CustomInsideDrawer.dart';
 
 class PersonScreen extends StatefulWidget {

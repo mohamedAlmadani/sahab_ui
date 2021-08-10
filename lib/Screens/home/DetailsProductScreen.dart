@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:localize_and_translate/localize_and_translate.dart';
-import 'package:sahab/Screens/home.dart';
+import 'package:sahab/Screens/SearchScreen.dart';
+import 'package:sahab/Screens/home/home.dart';
 import 'package:sahab/Widget/TextStyleWidget.dart';
 import 'package:sahab/Widget/appbar_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,7 +24,11 @@ class _DetailsProductState extends State<DetailsProduct> {
           iconaction: Icons.search ,
           ontap: (){
             Get.to(Home());
-          }
+          },
+          onTaptwo: (){
+            Get.to(SearchScreen());
+
+    },
 
       ),
       body: SingleChildScrollView(
@@ -225,7 +229,7 @@ class _DetailsProductState extends State<DetailsProduct> {
                             ],
                           ),
                         ),
-                        Spacer(),
+                        // Spacer(),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Container(

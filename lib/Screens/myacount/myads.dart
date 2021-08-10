@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
-import 'package:sahab/Screens/home.dart';
+import 'package:sahab/Screens/home/home.dart';
 import 'package:sahab/Widget/appbar_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

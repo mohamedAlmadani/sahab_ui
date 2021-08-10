@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
-import 'package:sahab/Screens/SectionAdsScreen.dart';
-import 'package:sahab/Screens/home.dart';
+import 'package:sahab/Screens/home/SectionAdsScreen.dart';
+import 'package:sahab/Screens/ath/LoginScreen.dart';
+import 'package:sahab/Screens/home/home.dart';
 import 'package:sahab/Widget/TextStyleWidget.dart';
 
 class SectionsScreen extends StatefulWidget {
@@ -27,6 +28,7 @@ class _SectionsScreenState extends State<SectionsScreen> {
             icon: Icon(Icons.arrow_back_ios),
             color: Colors.black,
             onPressed: (){
+              Get.to(LoginScreen());
 
             },
           ),
@@ -86,7 +88,7 @@ class _SectionsScreenState extends State<SectionsScreen> {
                     bottomLeft: Radius.circular(10),
                     topRight: Radius.circular(10)),
                 // color: Colors.red,
-                border: Border.all(color: Colors.grey)),
+                border: Border.all(color: Colors.grey,width: 2)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

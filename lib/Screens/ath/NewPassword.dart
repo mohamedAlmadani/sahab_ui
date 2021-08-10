@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:sahab/Screens/ath/SurePhoneScreen.dart';
+import 'package:sahab/Widget/CustonShapLogin.dart';
 import 'package:sahab/Widget/TextStyleWidget.dart';
 import 'package:sahab/Widget/customshap.dart';
 import 'package:sahab/Widget/customtextField.dart';
@@ -25,20 +26,10 @@ class _NewPasswordState extends State<NewPassword> {
 
             children: [
               SizedBox(
-                height: 40.h,
+                height: 60.h,
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
-                width: 74.0.w,
-                height: 74.0.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14.0),
-                    color: const Color(0xFF355ABE),
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/logob.png'))),
+              CustomShapLogin(),
 
-                // child: Image.asset('assets/images/logob.png'),
-              ),
 
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 0.h, horizontal: 10.w),
@@ -72,7 +63,7 @@ class _NewPasswordState extends State<NewPassword> {
               SizedBox(height: 80.h,),
               CustomShape(
                 text: translator.translate('confirmation'),
-                icon: Icons.arrow_back_ios,
+                icon: Icons.arrow_forward_ios,
                 ontap: (){
                   Get.to(SurePhoneScreen());
                 },
